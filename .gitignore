@@ -1,6 +1,7 @@
 cc.txt
 
 .DS_Store
+.npmrc
 .env
 node_modules
 package-lock.json
