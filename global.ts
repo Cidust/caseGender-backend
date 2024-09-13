@@ -17,7 +17,7 @@ const readFileAsync = util.promisify(fs.readFile);
 async function readAccess() {
   try {
     // 读取文件内容
-    const data = await readFileAsync("./tornade.txt", "utf8");
+    const data = await readFileAsync("./cc.txt", "utf8");
 
     // 使用换行符分割文件内容为数组
     const lines = data.split("\n");
@@ -28,8 +28,10 @@ async function readAccess() {
     }
 
     // 获取第一行和第二行的内容
-    const a = lines[0];
+    let a = lines[0];
     const b = lines[1];
+
+    a = a.replace(/\r/g, "");
 
     // 返回结果
     return { a, b };
